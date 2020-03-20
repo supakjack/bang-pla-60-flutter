@@ -1,0 +1,30 @@
+class SumRequestList {
+  String imagePath;
+  String titleTxt;
+  String subTxt;
+
+  SumRequestList({
+    this.imagePath = '',
+    this.titleTxt = '',
+    this.subTxt = "",
+  });
+
+  static List<SumRequestList> sumRequestList = [
+    SumRequestList(
+      imagePath: 'assets/images/complain/maincomplain.png',
+      titleTxt: 'ร้องเรียน',
+      subTxt: 'ระบุปัญหา/ความเดือดร้อน',
+    ),
+    SumRequestList(
+      imagePath: 'assets/images/complain/mainstatus.jpg',
+      titleTxt: 'Dashboard',
+      subTxt: 'ติดตามสถานะคำร้อง',
+    ),
+    SumRequestList(
+      imagePath: 'assets/images/complain/mainstatus.jpg',
+      titleTxt: 'จองคิว',
+      subTxt: 'ทดสอบ',
+    ),
+
+  ];
+}
