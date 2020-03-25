@@ -178,7 +178,7 @@ class BookingState extends State<Booking> {
   }
 
   void postData(){
-    var url="http://10.80.39.17/service-bangpla/index.php/Queueonline/insert_queue_online";
+    var url="http://10.80.39.17/service-bangpla/index.php/Queueonline/queue_online_insert";
 
     _formattedDate = new DateFormat("dd/MM/yyyy").format(date);
     http.post(url, body: {

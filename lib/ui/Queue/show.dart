@@ -37,7 +37,7 @@ class Show extends StatelessWidget {
               child: Column(
                 children: <Widget>[ 
                   QrImage(
-                    data: infoQueue.qol_seq,
+                    data: "boq-"+infoQueue.qol_ref,
                     version: QrVersions.auto,
                     size: 250,
                     gapless: false,
@@ -325,7 +325,7 @@ class Show extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
                   Text(
-                    '${infoQueue.qol_seq} ', 
+                    '${infoQueue.qol_ref} ', 
                     style: TextStyle(
                       fontSize: 18,
                       color: Colors.grey[900],
