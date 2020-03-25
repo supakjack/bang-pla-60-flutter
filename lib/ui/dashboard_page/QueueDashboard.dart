@@ -398,36 +398,37 @@ class _DashboardState extends State<QueueDashboard> {
          
           _buildTile(
             Padding(
-              padding: const EdgeInsets.all(15.0),
-              child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: <Widget>[
-                    Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: <Widget>[
-                        Text('งบประมาณคงคลัง',
-                            style: TextStyle(
-                                color: Colors.blueAccent, fontSize: 16.0)),
-                        Text(
-                          '265K',
-                          style: TextStyle(
-                            fontSize: 30.0,
-                          ),
-                        ),
-                      ],
-                    ),
-                    Material(
-                        color: Colors.blue,
-                        borderRadius: BorderRadius.circular(24.0),
-                        child: Center(
-                            child: Padding(
-                          padding: const EdgeInsets.all(16.0),
-                          child: Icon(Icons.local_atm,
-                              color: Colors.white, size: 30.0),
-                        )))
-                  ]),
+              padding: const EdgeInsets.all(1),
+              // child: Row(
+              //     mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              //     crossAxisAlignment: CrossAxisAlignment.center,
+              //     children: <Widget>[
+              //       Column(
+              //         mainAxisAlignment: MainAxisAlignment.center,
+              //         crossAxisAlignment: CrossAxisAlignment.start,
+              //         children: <Widget>[
+              //           Text('ประมาณคงงบคลัง',
+              //               style: TextStyle(
+              //                   color: Colors.blueAccent, fontSize: 16.0)),
+              //           Text(
+              //             '265K',
+              //             style: TextStyle(
+              //               fontSize: 30.0,
+              //             ),
+              //           ),
+              //         ],
+              //       ),
+              //       Material(
+              //           color: Colors.blue,
+              //           borderRadius: BorderRadius.circular(24.0),
+              //           child: Center(
+              //               child: Padding(
+              //             padding: const EdgeInsets.all(16.0),
+              //             child: Icon(Icons.local_atm,
+              //                 color: Colors.white, size: 30.0),
+              //           )))
+              //     ]),
+           
             ),
           ),
          
@@ -504,6 +505,7 @@ class _DashboardState extends State<QueueDashboard> {
               );
             },
           ),
+          
           _buildTile(
             Padding(
               padding: const EdgeInsets.all(15.0),
@@ -516,7 +518,7 @@ class _DashboardState extends State<QueueDashboard> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
                         Text(
-                          'คำร้องที่ยังไม่ได้ดำเนินการ',
+                          'คิวที่ยังไม่ได้ดำเนินการ',
                           style: TextStyle(color: Colors.red, fontSize: 16.0),
                         ),
                         FutureBuilder<Complian>(
@@ -559,7 +561,7 @@ class _DashboardState extends State<QueueDashboard> {
           ),
           Padding(
             padding: const EdgeInsets.all(7.5),
-            child: myCircularItems("จำนวนคำร้อง", "68.7M"),
+            child: myCircularItems("จำนวนคิว", "68.7M"),
           ),
           Padding(
             padding: const EdgeInsets.all(7.5),

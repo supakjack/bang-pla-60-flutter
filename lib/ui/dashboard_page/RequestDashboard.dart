@@ -159,7 +159,7 @@ class _DashboardState extends State<RequestDashboard> {
 
   final List<List<double>> charts = [
     [
-      0.0,
+      1.0,
       0.3,
       0.7,
       0.6,
@@ -446,6 +446,8 @@ class _DashboardState extends State<RequestDashboard> {
                   ]),
             ),
           ),
+
+
           _buildTile(
             Padding(
               padding: const EdgeInsets.all(15.0),
@@ -473,7 +475,6 @@ class _DashboardState extends State<RequestDashboard> {
                             ),
                           ),
                         ],
-                      
                       ),
                       DropdownButton(
                         isDense: true,
@@ -498,15 +499,14 @@ class _DashboardState extends State<RequestDashboard> {
                       )
                     ],
                   ),
-                  // Padding(
-                  //   padding: EdgeInsets.only(bottom: 4.0),
-                  // ),
-                  // Sparkline(
-                  //   data: charts[actualChart],
-                  //   lineWidth: 5.0,
-                  //   lineColor: Colors.greenAccent,
-                  // ),
-                  
+                  Padding(
+                    padding: EdgeInsets.only(bottom: 4.0),
+                  ),
+                  Sparkline(
+                    data: charts[actualChart],
+                    lineWidth: 5.0,
+                    lineColor: Colors.greenAccent,
+                  )
                 ],
               ),
             ),
@@ -519,6 +519,8 @@ class _DashboardState extends State<RequestDashboard> {
               );
             },
           ),
+          
+
           _buildTile(
             Padding(
               padding: const EdgeInsets.all(15.0),
