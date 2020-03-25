@@ -36,13 +36,13 @@ class Complian {
   }
 }
 
-class Dashboard extends StatefulWidget {
-  Dashboard({Key key}) : super(key: key);
+class QueueDashboard extends StatefulWidget {
+  QueueDashboard({Key key}) : super(key: key);
   @override
   _DashboardState createState() => _DashboardState();
 }
 
-class _DashboardState extends State<Dashboard> {
+class _DashboardState extends State<QueueDashboard> {
   Future<Complian> futureComplian;
 
   List<CircularStackEntry> circularData = <CircularStackEntry>[
@@ -383,28 +383,11 @@ class _DashboardState extends State<Dashboard> {
             }),
         elevation: 2.0,
         backgroundColor: Colors.lightBlue[900],
-        title: Text('Dashboard',
+        title: Text('QueueDashboard',
             style: TextStyle(
                 color: Colors.white,
                 fontWeight: FontWeight.w700,
                 fontSize: 30.0)),
-        // actions: <Widget>[
-        //   Container(
-        //     margin: EdgeInsets.only(right: 8.0),
-        //     child: Row(
-        //       mainAxisAlignment: MainAxisAlignment.center,
-        //       crossAxisAlignment: CrossAxisAlignment.center,
-        //       children: <Widget>[
-        //         Text('beclothed.com',
-        //             style: TextStyle(
-        //                 color: Colors.blue,
-        //                 fontWeight: FontWeight.w700,
-        //                 fontSize: 14.0)),
-        //         Icon(Icons.arrow_drop_down, color: Colors.black54)
-        //       ],
-        //     ),
-        //   )
-        // ],
       ),
       body: StaggeredGridView.count(
         crossAxisCount: 4,
@@ -412,6 +395,7 @@ class _DashboardState extends State<Dashboard> {
         mainAxisSpacing: 12.0,
         padding: EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
         children: <Widget>[
+         
           _buildTile(
             Padding(
               padding: const EdgeInsets.all(15.0),
@@ -446,6 +430,9 @@ class _DashboardState extends State<Dashboard> {
                   ]),
             ),
           ),
+         
+         
+
           _buildTile(
             Padding(
               padding: const EdgeInsets.all(15.0),
@@ -641,6 +628,7 @@ class _DashboardState extends State<Dashboard> {
           StaggeredTile.extent(4, 220.0),
           StaggeredTile.extent(4, 220.0),
         ],
+      
       ),
     );
   }

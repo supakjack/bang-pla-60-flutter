@@ -17,14 +17,18 @@ class SumRequestList {
     ),
     SumRequestList(
       imagePath: 'assets/images/complain/mainstatus.jpg',
-      titleTxt: 'Dashboard',
-      subTxt: 'ติดตามสถานะคำร้อง',
+      titleTxt: 'Request Dashboard',
+      subTxt: 'Dashboard จัดการคำร้อง',
+    ),
+    SumRequestList(
+      imagePath: 'assets/images/complain/mainstatus.jpg',
+      titleTxt: 'Queue Dashboard',
+      subTxt: 'Dashboard จัดการคิว',
     ),
     SumRequestList(
       imagePath: 'assets/images/complain/mainstatus.jpg',
       titleTxt: 'จองคิว',
       subTxt: 'ทดสอบ',
     ),
-
   ];
 }

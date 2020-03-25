@@ -36,13 +36,13 @@ class Complian {
   }
 }
 
-class Dashboard extends StatefulWidget {
-  Dashboard({Key key}) : super(key: key);
+class RequestDashboard extends StatefulWidget {
+  RequestDashboard({Key key}) : super(key: key);
   @override
   _DashboardState createState() => _DashboardState();
 }
 
-class _DashboardState extends State<Dashboard> {
+class _DashboardState extends State<RequestDashboard> {
   Future<Complian> futureComplian;
 
   List<CircularStackEntry> circularData = <CircularStackEntry>[
@@ -383,7 +383,7 @@ class _DashboardState extends State<Dashboard> {
             }),
         elevation: 2.0,
         backgroundColor: Colors.lightBlue[900],
-        title: Text('Dashboard',
+        title: Text('RequestDashboard',
             style: TextStyle(
                 color: Colors.white,
                 fontWeight: FontWeight.w700,
@@ -473,6 +473,7 @@ class _DashboardState extends State<Dashboard> {
                             ),
                           ),
                         ],
+                      
                       ),
                       DropdownButton(
                         isDense: true,
@@ -497,14 +498,15 @@ class _DashboardState extends State<Dashboard> {
                       )
                     ],
                   ),
-                  Padding(
-                    padding: EdgeInsets.only(bottom: 4.0),
-                  ),
-                  Sparkline(
-                    data: charts[actualChart],
-                    lineWidth: 5.0,
-                    lineColor: Colors.greenAccent,
-                  )
+                  // Padding(
+                  //   padding: EdgeInsets.only(bottom: 4.0),
+                  // ),
+                  // Sparkline(
+                  //   data: charts[actualChart],
+                  //   lineWidth: 5.0,
+                  //   lineColor: Colors.greenAccent,
+                  // ),
+                  
                 ],
               ),
             ),

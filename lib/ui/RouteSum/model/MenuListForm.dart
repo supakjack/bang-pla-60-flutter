@@ -1,6 +1,9 @@
 import 'package:bangplasmartapp/ui/Queue/bookingList.dart';
 import 'package:bangplasmartapp/ui/complain_page/ComplainPage.dart';
 import 'package:bangplasmartapp/ui/dashboard_page/Dashboard.dart';
+import 'package:bangplasmartapp/ui/dashboard_page/RequestDashboard.dart';
+import 'package:bangplasmartapp/ui/dashboard_page/QueueDashboard.dart';
+
 import 'package:flutter/widgets.dart';
 
 class MenuForm {
@@ -17,12 +20,13 @@ class MenuForm {
       navigateScreen: ComplainPage(),
     ),
     MenuForm(
-      navigateScreen: Dashboard(),
+      navigateScreen: RequestDashboard(),
+    ),
+    MenuForm(
+      navigateScreen: QueueDashboard(),
     ),
     MenuForm(
       navigateScreen: BookingList(),
     ),
-
   ];
 }
-
