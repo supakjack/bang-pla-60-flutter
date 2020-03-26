@@ -172,8 +172,8 @@ class DatumLegendWithMeasuresQueue extends StatelessWidget {
     final random = new Random();
 
     final data = [
-      new LinearSales("online Q พ่อง", random.nextInt(100)),
-      new LinearSales("walkin Q แม่", random.nextInt(100)),
+      new LinearSales("คิวออนไลน์", random.nextInt(100)),
+      new LinearSales("คิววอล์คอิน", random.nextInt(100)),
       // new LinearSales(2016, random.nextInt(100)),
       // new LinearSales(2017, random.nextInt(100)),
     ];

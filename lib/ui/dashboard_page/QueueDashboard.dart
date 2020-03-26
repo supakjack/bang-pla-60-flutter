@@ -8,10 +8,13 @@ import 'package:flutter_circular_chart/flutter_circular_chart.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import './chart/IndexChart.dart';
 import './ListComplain.dart';
+import 'chart/GroupedBarChart.dart';
+import 'chart/StackedFillColorBarChart.dart';
+import 'chart/DoubleLineChart.dart';
 
 //import 'shop_items_page.dart';
 Future<Complian> fetchComplian() async {
-    final response = [];
+  final response = [];
   // final response = await http.get(
   //     'http://10.80.39.17/service-bangpla/index.php/Complain/get_count_cda_active');
 
@@ -157,221 +160,6 @@ class _DashboardState extends State<QueueDashboard> {
     futureComplian = fetchComplian();
   }
 
-  final List<List<double>> charts = [
-    [
-      0.0,
-      0.3,
-      0.7,
-      0.6,
-      0.55,
-      0.8,
-      1.2,
-      1.3,
-      1.35,
-      0.9,
-      1.5,
-      1.7,
-      1.8,
-      1.7,
-      1.2,
-      0.8,
-      1.9,
-      2.0,
-      2.2,
-      1.9,
-      2.2,
-      2.1,
-      2.0,
-      2.3,
-      2.4,
-      2.45,
-      2.6,
-      3.6,
-      2.6,
-      2.7,
-      2.9,
-      2.8,
-      3.4
-    ],
-    [
-      0.0,
-      0.3,
-      0.7,
-      0.6,
-      0.55,
-      0.8,
-      1.2,
-      1.3,
-      1.35,
-      0.9,
-      1.5,
-      1.7,
-      1.8,
-      1.7,
-      1.2,
-      0.8,
-      1.9,
-      2.0,
-      2.2,
-      1.9,
-      2.2,
-      2.1,
-      2.0,
-      2.3,
-      2.4,
-      2.45,
-      2.6,
-      3.6,
-      2.6,
-      2.7,
-      2.9,
-      2.8,
-      3.4,
-      0.0,
-      0.3,
-      0.7,
-      0.6,
-      0.55,
-      0.8,
-      1.2,
-      1.3,
-      1.35,
-      0.9,
-      1.5,
-      1.7,
-      1.8,
-      1.7,
-      1.2,
-      0.8,
-      1.9,
-      2.0,
-      2.2,
-      1.9,
-      2.2,
-      2.1,
-      2.0,
-      2.3,
-      2.4,
-      2.45,
-      2.6,
-      3.6,
-      2.6,
-      2.7,
-      2.9,
-      2.8,
-      3.4,
-    ],
-    [
-      0.0,
-      0.3,
-      0.7,
-      0.6,
-      0.55,
-      0.8,
-      1.2,
-      1.3,
-      1.35,
-      0.9,
-      1.5,
-      1.7,
-      1.8,
-      1.7,
-      1.2,
-      0.8,
-      1.9,
-      2.0,
-      2.2,
-      1.9,
-      2.2,
-      2.1,
-      2.0,
-      2.3,
-      2.4,
-      2.45,
-      2.6,
-      3.6,
-      2.6,
-      2.7,
-      2.9,
-      2.8,
-      3.4,
-      0.0,
-      0.3,
-      0.7,
-      0.6,
-      0.55,
-      0.8,
-      1.2,
-      1.3,
-      1.35,
-      0.9,
-      1.5,
-      1.7,
-      1.8,
-      1.7,
-      1.2,
-      0.8,
-      1.9,
-      2.0,
-      2.2,
-      1.9,
-      2.2,
-      2.1,
-      2.0,
-      2.3,
-      2.4,
-      2.45,
-      2.6,
-      3.6,
-      2.6,
-      2.7,
-      2.9,
-      2.8,
-      3.4,
-      0.0,
-      0.3,
-      0.7,
-      0.6,
-      0.55,
-      0.8,
-      1.2,
-      1.3,
-      1.35,
-      0.9,
-      1.5,
-      1.7,
-      1.8,
-      1.7,
-      1.2,
-      0.8,
-      1.9,
-      2.0,
-      2.2,
-      1.9,
-      2.2,
-      2.1,
-      2.0,
-      2.3,
-      2.4,
-      2.45,
-      2.6,
-      3.6,
-      2.6,
-      2.7,
-      2.9,
-      2.8,
-      3.4
-    ]
-  ];
-
-  static final List<String> chartDropdownItems = [
-    'Last 7 days',
-    'Last month',
-    'Last year'
-  ];
-  String actualDropdown = chartDropdownItems[0];
-  int actualChart = 0;
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -395,117 +183,46 @@ class _DashboardState extends State<QueueDashboard> {
         mainAxisSpacing: 12.0,
         padding: EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
         children: <Widget>[
-         
-          _buildTile(
-            Padding(
-              padding: const EdgeInsets.all(1),
-              // child: Row(
-              //     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              //     crossAxisAlignment: CrossAxisAlignment.center,
-              //     children: <Widget>[
-              //       Column(
-              //         mainAxisAlignment: MainAxisAlignment.center,
-              //         crossAxisAlignment: CrossAxisAlignment.start,
-              //         children: <Widget>[
-              //           Text('ประมาณคงงบคลัง',
-              //               style: TextStyle(
-              //                   color: Colors.blueAccent, fontSize: 16.0)),
-              //           Text(
-              //             '265K',
-              //             style: TextStyle(
-              //               fontSize: 30.0,
-              //             ),
-              //           ),
-              //         ],
-              //       ),
-              //       Material(
-              //           color: Colors.blue,
-              //           borderRadius: BorderRadius.circular(24.0),
-              //           child: Center(
-              //               child: Padding(
-              //             padding: const EdgeInsets.all(16.0),
-              //             child: Icon(Icons.local_atm,
-              //                 color: Colors.white, size: 30.0),
-              //           )))
-              //     ]),
-           
-            ),
-          ),
-         
-         
-
           _buildTile(
             Padding(
               padding: const EdgeInsets.all(15.0),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.start,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: <Widget>[
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: <Widget>[
-                      Column(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: <Widget>[
-                          Text(
-                            'จำนวนผู้เข้าใช้บริการ',
-                            style:
-                                TextStyle(color: Colors.green, fontSize: 16.0),
-                          ),
-                          Text(
-                            '16K',
+              child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: <Widget>[
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: <Widget>[
+                        Text('ผู้เข้ารับบริการอาคารและสถานที่',
                             style: TextStyle(
-                              fontSize: 30.0,
-                            ),
+                                color: Colors.blueAccent, fontSize: 16.0)),
+                        Text(
+                          '46 คน',
+                          style: TextStyle(
+                            fontSize: 30.0,
                           ),
-                        ],
-                      ),
-                      DropdownButton(
-                        isDense: true,
-                        value: actualDropdown,
-                        onChanged: (String value) => setState(() {
-                          actualDropdown = value;
-                          actualChart = chartDropdownItems
-                              .indexOf(value); // Refresh the chart
-                        }),
-                        items: chartDropdownItems.map((String title) {
-                          return DropdownMenuItem(
-                            value: title,
-                            child: Text(
-                              title,
-                              style: TextStyle(
-                                  color: Colors.blue,
-                                  fontWeight: FontWeight.w400,
-                                  fontSize: 14.0),
-                            ),
-                          );
-                        }).toList(),
-                      )
-                    ],
-                  ),
-                  Padding(
-                    padding: EdgeInsets.only(bottom: 4.0),
-                  ),
-                  Sparkline(
-                    data: charts[actualChart],
-                    lineWidth: 5.0,
-                    lineColor: Colors.greenAccent,
-                  )
-                ],
-              ),
+                        ),
+                      ],
+                    ),
+                    Material(
+                        color: Colors.blue,
+                        borderRadius: BorderRadius.circular(24.0),
+                        child: Center(
+                            child: Padding(
+                          padding: const EdgeInsets.all(16.0),
+                          child: Icon(Icons.home,
+                              color: Colors.white, size: 30.0),
+                        )))
+                  ]),
             ),
-            onTap: () {
-              // Navigator.pushNamed(context, '/complainList');
-              Navigator.of(context).push(
-                MaterialPageRoute(
-                  builder: (BuildContext context) => Name(),
-                ),
-              );
-            },
           ),
-          
+          _buildTile(
+            Padding(
+              padding: const EdgeInsets.all(15.0),
+              child: new DoubleLineChart.withSampleData(),
+            ),
+          ),
           _buildTile(
             Padding(
               padding: const EdgeInsets.all(15.0),
@@ -518,32 +235,13 @@ class _DashboardState extends State<QueueDashboard> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
                         Text(
-                          'คิวที่ยังไม่ได้ดำเนินการ',
+                          'ผู้เข้ารับบริการเกษตรและสหกรณ์',
                           style: TextStyle(color: Colors.red, fontSize: 16.0),
                         ),
-                        FutureBuilder<Complian>(
-                          future: futureComplian,
-                          builder: (context, snapshot) {
-                            if (snapshot.hasData) {
-                              return Text(
-                                snapshot.data.cdaAc,
-                                style: TextStyle(
-                                  fontSize: 30.0,
-                                ),
-                              );
-                            } else if (snapshot.hasError) {
-                              return Text(
-                                "${snapshot.error}",
-                                style: TextStyle(
-                                  fontSize: 30.0,
-                                ),
-                              );
-                            }
-
-                            // By default, show a loading spinner.
-                            return CircularProgressIndicator();
-                          },
-                        ),
+                        Text(
+                          '84 คน',
+                          style: TextStyle(color: Colors.black, fontSize: 30.0),
+                        )
                       ],
                     ),
                     Material(
@@ -552,7 +250,7 @@ class _DashboardState extends State<QueueDashboard> {
                       child: Center(
                           child: Padding(
                         padding: const EdgeInsets.all(16.0),
-                        child: Icon(Icons.report_problem,
+                        child: Icon(Icons.nature_people,
                             color: Colors.white, size: 30.0),
                       )),
                     )
@@ -561,61 +259,32 @@ class _DashboardState extends State<QueueDashboard> {
           ),
           Padding(
             padding: const EdgeInsets.all(7.5),
-            child: myCircularItems("จำนวนคิว", "68.7M"),
+            child: myTextItems("จำนวนคิว", "68"),
           ),
           Padding(
             padding: const EdgeInsets.all(7.5),
-            child: myTextItems("Queue online", "48.6M"),
+            child: myTextItems("คิวออนไลน์", "48"),
           ),
           Padding(
             padding: const EdgeInsets.all(7.5),
-            child: myTextItems("ผู้ใช้", "25.5M"),
+            child: myTextItems("คิววอล์คอิน", "20"),
           ),
           _buildTile(
             Padding(
               padding: const EdgeInsets.all(15.0),
-              // child: Column(
-              //crossAxisAlignment: CrossAxisAlignment.start,
-              //mainAxisSize: MainAxisSize.max,
-              // children: <Widget>[
-              // Row(
-              //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              //   crossAxisAlignment: CrossAxisAlignment.start,
-              //   children: <Widget>[
-              //     Column(
-              //       mainAxisAlignment: MainAxisAlignment.start,
-              //       crossAxisAlignment: CrossAxisAlignment.start,
-              //       children: <Widget>[
-              //         Text(
-              //           'จำนวนผู้เข้าใช้บริการ',
-              //           style:
-              //               TextStyle(color: Colors.green, fontSize: 16.0),
-              //         ),
-              //       ],
-              //     ),
-              //   ],
-              // ),
-              // Padding(
-              //   padding: EdgeInsets.only(bottom: 4.0),
-              // ),
-              // Padding(
-              //   padding: EdgeInsets.all(50.0),
               child: new DatumLegendWithMeasuresQueue.withRandomData(),
-              // ),
-              //   ],
-              // ),
             ),
           ),
           _buildTile(
             Padding(
               padding: const EdgeInsets.all(15.0),
-              child: new StackedAreaCustomColorLineChart.withRandomData(),
+              child: new StackedFillColorBarChart.withSampleData(),
             ),
           ),
           _buildTile(
             Padding(
               padding: const EdgeInsets.all(15.0),
-              child: new VerticalBarLabelChart.withRandomData(),
+              child: new GroupedBarChart.withRandomData(),
             ),
           ),
         ],
@@ -630,7 +299,6 @@ class _DashboardState extends State<QueueDashboard> {
           StaggeredTile.extent(4, 220.0),
           StaggeredTile.extent(4, 220.0),
         ],
-      
       ),
     );
   }
