@@ -21,7 +21,7 @@ class _ComplainPageState extends State<ComplainPage> with TickerProviderStateMix
 
   @override
   void initState() {
-    animationController = AnimationController(duration: Duration(milliseconds: 1000), vsync: this);
+    animationController = AnimationController(duration: Duration(milliseconds: 2000), vsync: this);
     super.initState();
   }
 

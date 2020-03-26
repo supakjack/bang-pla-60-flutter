@@ -41,25 +41,25 @@ class CategoryRequestList {
     CategoryRequestList(
       imagePath: 'assets/images/complain/dispute.jpg',
       title: 'ข้อพิพาทระหว่างบุคคล',
-      subtitle: 'คำร้องข้อพิพาทระหว่างบุคคล',
+      subtitle: 'แบบคำร้องข้อพิพาทระหว่างบุคคล',
       cda_cdt_id: 23,
     ),
     CategoryRequestList(
       imagePath: 'assets/images/complain/government.jpg',
       title: 'ร้องเรียนโครงการรัฐ',
-      subtitle: 'คำร้องโครงการรัฐ',
+      subtitle: 'แบบคำร้องโครงการรัฐ',
       cda_cdt_id: 24,
     ),
     CategoryRequestList(
       imagePath: 'assets/images/complain/flood.jpg',
       title: 'อุทกภัย',
-      subtitle: 'คำร้องอุทกภัย',
+      subtitle: 'แบบคำร้องอุทกภัย',
       cda_cdt_id: 28,
     ),
     CategoryRequestList(
       imagePath: 'assets/images/complain/fire.jpg',
       title: 'อัคคีภัย',
-      subtitle: 'คำร้องอัคคีภัย',
+      subtitle: 'แบบคำร้องอัคคีภัย',
       cda_cdt_id: 29,
     ),
     CategoryRequestList(
@@ -83,7 +83,7 @@ class CategoryRequestList {
     CategoryRequestList(
       imagePath: 'assets/images/complain/conflict.jpg',
       title: 'การวิวาท',
-      subtitle: 'ร้องเรียนการวิวาท',
+      subtitle: 'แบบคำร้องเรียนการวิวาท',
       cda_cdt_id: 39,
     ),
   ];
@@ -123,7 +123,7 @@ class StatusRequestList {
     StatusRequestList(
       imagePath: 'assets/images/complain/dispute.jpg',
       title: 'ข้อพิพาทระหว่างบุคคล',
-      status: 'กำลังดำเนินทำงาน',
+      status: 'กำลังดำเนินการ',
     ),
     StatusRequestList(
       imagePath: 'assets/images/complain/government.jpg',
