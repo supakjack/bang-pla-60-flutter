@@ -54,8 +54,8 @@ class DatumLegendWithMeasuresRequest extends StatelessWidget {
     final random = new Random();
 
     final data = [
-      new LinearSales("ผู้ใช้งานประเภท Online", random.nextInt(100)),
-      new LinearSales("ผู้ใช้งานประเภท Walkin", random.nextInt(100)),
+      new LinearSales("คำร้องประเภท Online", random.nextInt(100)),
+      new LinearSales("คำร้องประเภท Walkin", random.nextInt(100)),
       // new LinearSales(2016, random.nextInt(100)),
       // new LinearSales(2017, random.nextInt(100)),
     ];
