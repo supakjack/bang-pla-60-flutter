@@ -10,11 +10,11 @@ import './chart/IndexChart.dart';
 import './ListComplain.dart';
 
 // variable data
-final title01 = 'งบประมาณคงคลัง (พ่อง ทำเองดิสัส)';
-final data01 = '1K (พ่อง)';
+final title01 = 'งบประมาณคงคลัง';
+final data01 = '1K';
 
-final title02 = 'ห้ามตั้งยางเกิน (พ่อง)';
-final data02 = '2K(พ่อง)';
+final title02 = 'ห้ามตั้งยางเกิน';
+final data02 = '2K';
 
 final title03 = 'จำนวนคำร้อง';
 final data03 = '68.7M';
