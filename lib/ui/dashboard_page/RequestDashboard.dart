@@ -16,13 +16,13 @@ final data01 = '10K';
 final title02 = 'จำนวนคำร้อง';
 final data02 = '12K';
 
-final title03 = 'จำนวนคำร้อง\nแบ่งตามประเภท';
+final title03 = 'จำนวนคำร้อง\nตามประเภท';
 final data03 = '10K';
 
-final title04 = 'มีคำร้องมากที่สุด';
+final title04 = 'คำร้องมากสุด';
 final data04 = 'ร้องเรียนนายก';
 
-final title05 = 'มีคำร้องน้อยที่สุด';
+final title05 = 'คำร้องน้อยสุด';
 final data05 = 'ทะเลาะวิวาท';
 // variable data
 
@@ -104,7 +104,7 @@ class _DashboardState extends State<RequestDashboard> {
                     child: Text(
                       subtitle,
                       style: TextStyle(
-                        fontSize: 30.0,
+                        fontSize: 18.0,
                       ),
                     ),
                   ),
@@ -147,7 +147,7 @@ class _DashboardState extends State<RequestDashboard> {
                     child: Text(
                       subtitle,
                       style: TextStyle(
-                        fontSize: 30.0,
+                        fontSize: 20.0,
                       ),
                     ),
                   ),
