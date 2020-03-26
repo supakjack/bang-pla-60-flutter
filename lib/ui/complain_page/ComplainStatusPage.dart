@@ -22,16 +22,16 @@ class _StatusPageState extends State<StatusPage> with TickerProviderStateMixin {
 
   Future<List<StatusRequest>> fetchStatusRequest() async {
     var url = 'http://10.80.39.17/service-bangpla/index.php/Complain/get_status_all_data';
-    var response = await http.get(url);
+    var response = [];
 
     var statusRequestList = List<StatusRequest>();
 
-    if (response.statusCode == 200) {
-      var sumJson = json.decode(response.body);
-      for (var oneJson in sumJson) {
-        statusRequestList.add(StatusRequest.fromJson(oneJson));
-      }
-    }
+    // if (response.statusCode == 200) {
+    //   var sumJson = json.decode(response.body);
+    //   for (var oneJson in sumJson) {
+    //     statusRequestList.add(StatusRequest.fromJson(oneJson));
+    //   }
+    // }
     return statusRequestList;
   }
   List<String> listnewsimage = new List();
