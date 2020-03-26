@@ -14,7 +14,6 @@ class BookingList extends StatefulWidget {
 }
 
 class BookingListState extends State<BookingList> {
-
   var _title = "รายการจองคิว";
   // Widget tabBody = Container(
   //   color: Color(0xFFF2F3F8),
@@ -23,12 +22,12 @@ class BookingListState extends State<BookingList> {
   List<InfoQueueUser> _infoQueue = List<InfoQueueUser>();
 
   Future<List<InfoQueueUser>> fetchNotes() async {
-    
-    var url = 'http://10.80.39.17/service-bangpla/index.php/Queueonline/get_all_data_user';
+    var url =
+        'http://10.80.39.17/service-bangpla/index.php/Queueonline/get_all_queue_by_user_id';
     var response = await http.get(url);
-    
+
     var infoQueueUserList = List<InfoQueueUser>();
-    
+
     if (response.statusCode == 200) {
       var notesJson = json.decode(response.body);
       for (var noteJson in notesJson) {
@@ -38,7 +37,6 @@ class BookingListState extends State<BookingList> {
     return infoQueueUserList;
   }
 
-  
   @override
   void initState() {
     fetchNotes().then((value) {
@@ -59,7 +57,7 @@ class BookingListState extends State<BookingList> {
           //   icon: new Icon(Icons.arrow_back),
           //   onPressed: () {},
           // ),
-          centerTitle: true ,
+          centerTitle: true,
           title: Text(_title),
         ),
         body: Column(
@@ -82,14 +80,16 @@ class BookingListState extends State<BookingList> {
     );
   }
 }
+
 Widget bookingSection(BuildContext context) {
- return Padding(padding: EdgeInsets.all(10), 
+  return Padding(
+    padding: EdgeInsets.all(10),
     child: Row(
       mainAxisAlignment: MainAxisAlignment.end,
       children: <Widget>[
-        Container (
-          width: 100,
-          height: 24,
+        Container(
+          width: 125,
+          height: 30,
           margin: EdgeInsets.only(right: 8),
           decoration: BoxDecoration(
             color: Color(0xFF00B6F0),
@@ -98,10 +98,9 @@ Widget bookingSection(BuildContext context) {
             ),
             boxShadow: <BoxShadow>[
               BoxShadow(
-                color: Color(0xFF00B6F0)
-                .withOpacity(0.5),
-                offset: Offset(1.1, 1.1),
-                blurRadius: 10.0),
+                  color: Color(0xFF00B6F0).withOpacity(0.5),
+                  offset: Offset(1.1, 1.1),
+                  blurRadius: 10.0),
             ],
           ),
           child: MaterialButton(
@@ -109,11 +108,10 @@ Widget bookingSection(BuildContext context) {
               "จองคิว",
               textAlign: TextAlign.left,
               style: TextStyle(
-                fontWeight: FontWeight.w600,
-                fontSize: 14,
-                letterSpacing: 0.0,
-                color: Color(0xFFFFFFFF)
-              ),
+                  fontWeight: FontWeight.w600,
+                  fontSize: 20,
+                  letterSpacing: 0.0,
+                  color: Color(0xFFFFFFFF)),
             ),
             onPressed: () {
               Navigator.push(
@@ -130,25 +128,22 @@ Widget bookingSection(BuildContext context) {
             decoration: BoxDecoration(
               color: Color(0xFF00B6F0),
               borderRadius: BorderRadius.all(
-              Radius.circular(16.0),
-            ),
-            boxShadow: <BoxShadow>[
-              BoxShadow(
-                color: Color(0xFF00B6F0)
-                .withOpacity(0.5),
-                offset: Offset(1.1, 1.1),
-                blurRadius: 10.0),
-            ],
-            border: new Border.all(
-              color: Color(0xFF3A5160)
-              .withOpacity(0.2)),
+                Radius.circular(16.0),
+              ),
+              boxShadow: <BoxShadow>[
+                BoxShadow(
+                    color: Color(0xFF00B6F0).withOpacity(0.5),
+                    offset: Offset(1.1, 1.1),
+                    blurRadius: 10.0),
+              ],
+              border: new Border.all(color: Color(0xFF3A5160).withOpacity(0.2)),
             ),
             child: MaterialButton(
               padding: EdgeInsets.symmetric(vertical: 2.0),
               child: Icon(
-              Icons.add,
-              color: Color(0xFFFFFFFF),
-              size: 20,
+                Icons.add,
+                color: Color(0xFFFFFFFF),
+                size: 20,
               ),
               onPressed: () {
                 Navigator.push(
@@ -160,16 +155,14 @@ Widget bookingSection(BuildContext context) {
           ),
         ),
       ],
-    ), 
+    ),
   );
 }
 
-
 // ListView detailSection(BuildContext context) {
-  
-  
+
 //   var bookingList = BookingListData.bookingList;
-  
+
 //   return ListView.builder(
 //         itemBuilder: (context, index) {
 //           return Card(
@@ -216,12 +209,11 @@ Widget bookingSection(BuildContext context) {
 //                           ),
 //                         );
 
-
 // Card _buildRowListView({String date, String title}){
 //   return Card(child:
-//      Padding( padding: EdgeInsets.all(10), child: 
+//      Padding( padding: EdgeInsets.all(10), child:
 //       Row(children: <Widget>[
-//         Expanded(child: 
+//         Expanded(child:
 //           Column(
 //             crossAxisAlignment: CrossAxisAlignment.start,
 //             children: <Widget>[
@@ -232,18 +224,17 @@ Widget bookingSection(BuildContext context) {
 //         ),
 //         Icon(Icons.arrow_forward_ios)
 //       ],),
-//     ), 
+//     ),
 //     color: Colors.grey[300],
-//   ); 
+//   );
 // }
 
 Widget bottomBar(BuildContext context) {
-    return Column(
-      children: <Widget>[
-        Expanded(
-          child: SizedBox(),
-        ),
-        
-      ],
-    );
-  }
+  return Column(
+    children: <Widget>[
+      Expanded(
+        child: SizedBox(),
+      ),
+    ],
+  );
+}
