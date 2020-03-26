@@ -13,7 +13,7 @@ import './ListComplain.dart';
 final title01 = 'งบประมาณคงคลัง';
 final data01 = '1K';
 
-final title02 = 'ห้ามตั้งยางเกิน';
+final title02 = 'ผู้เข้ารับบริการ';
 final data02 = '2K';
 
 final title03 = 'จำนวนคำร้อง';
@@ -22,7 +22,7 @@ final data03 = '68.7M';
 final title04 = 'Queue online';
 final data04 = '48.6M';
 
-final title05 = 'ผู้ใช้';
+final title05 = 'Queue walkin';
 final data05 = '25.5M';
 // variable data
 
