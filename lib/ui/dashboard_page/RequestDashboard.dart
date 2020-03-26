@@ -10,20 +10,20 @@ import './chart/IndexChart.dart';
 import './ListComplain.dart';
 
 // variable data
-final title01 = 'งบประมาณคงคลัง';
-final data01 = '1K';
+final title01 = 'ผู้เข้ารับบริการ';
+final data01 = '10K';
 
-final title02 = 'ผู้เข้ารับบริการ';
-final data02 = '2K';
+final title02 = 'จำนวนคำร้อง';
+final data02 = '12K';
 
-final title03 = 'จำนวนคำร้อง';
-final data03 = '68.7M';
+final title03 = 'จำนวนคำร้อง\nแบ่งตามประเภท';
+final data03 = '10K';
 
-final title04 = 'Queue online';
-final data04 = '48.6M';
+final title04 = 'มีคำร้องมากที่สุด';
+final data04 = 'ร้องเรียนนายก';
 
-final title05 = 'Queue walkin';
-final data05 = '25.5M';
+final title05 = 'มีคำร้องน้อยที่สุด';
+final data05 = 'ทะเลาะวิวาท';
 // variable data
 
 //import 'shop_items_page.dart';
