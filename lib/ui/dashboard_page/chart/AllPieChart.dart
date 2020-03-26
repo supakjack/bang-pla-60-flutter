@@ -240,8 +240,8 @@ class DatumLegendWithMeasuresQueue extends StatelessWidget {
   /// Create series list with one series
   static List<charts.Series<LinearSales, dynamic>> _createSampleData() {
     final data = [
-      new LinearSales("online", 100),
-      new LinearSales("walkin", 75),
+      new LinearSales("คิวออนไลน์", 48),
+      new LinearSales("คิววอล์คอิน", 20),
       // new LinearSales(2016, 25),
       // new LinearSales(2017, 5),
     ];

@@ -272,7 +272,7 @@ class _DashboardState extends State<QueueDashboard> {
           _buildTile(
             Padding(
               padding: const EdgeInsets.all(15.0),
-              child: new DatumLegendWithMeasuresQueue.withRandomData(),
+              child: new DatumLegendWithMeasuresQueue.withSampleData(),
             ),
           ),
           _buildTile(
