@@ -611,7 +611,7 @@ class _DashboardState extends State<Dashboard> {
               // ),
               // Padding(
               //   padding: EdgeInsets.all(50.0),
-              child: new DatumLegendWithMeasures.withRandomData(),
+              child: new DatumLegendWithMeasuresRequest.withRandomData(),
               // ),
               //   ],
               // ),

@@ -600,7 +600,7 @@ class _DashboardState extends State<QueueDashboard> {
               // ),
               // Padding(
               //   padding: EdgeInsets.all(50.0),
-              child: new DatumLegendWithMeasures.withRandomData(),
+              child: new DatumLegendWithMeasuresQueue.withRandomData(),
               // ),
               //   ],
               // ),

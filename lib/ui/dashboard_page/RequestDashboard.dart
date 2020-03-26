@@ -9,9 +9,26 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import './chart/IndexChart.dart';
 import './ListComplain.dart';
 
+// variable data
+final title01 = 'งบประมาณคงคลัง (พ่อง ทำเองดิสัส)';
+final data01 = '1K (พ่อง)';
+
+final title02 = 'ห้ามตั้งยางเกิน (พ่อง)';
+final data02 = '2K (พ่อง)';
+
+final title03 = 'จำนวนคำร้อง';
+final data03 = '68.7M';
+
+final title04 = 'Queue online';
+final data04 = '48.6M';
+
+final title05 = 'ผู้ใช้';
+final data05 = '25.5M';
+// variable data
+
 //import 'shop_items_page.dart';
 Future<Complian> fetchComplian() async {
-    final response = [];
+  final response = [];
   // final response = await http.get(
   //     'http://10.80.39.17/service-bangpla/index.php/Complain/get_count_cda_active');
 
@@ -423,11 +440,11 @@ class _DashboardState extends State<RequestDashboard> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
-                        Text('งบประมาณคงคลัง',
+                        Text(title01,
                             style: TextStyle(
                                 color: Colors.blueAccent, fontSize: 16.0)),
                         Text(
-                          '265K',
+                          data01,
                           style: TextStyle(
                             fontSize: 30.0,
                           ),
@@ -446,8 +463,6 @@ class _DashboardState extends State<RequestDashboard> {
                   ]),
             ),
           ),
-
-
           _buildTile(
             Padding(
               padding: const EdgeInsets.all(15.0),
@@ -464,12 +479,12 @@ class _DashboardState extends State<RequestDashboard> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: <Widget>[
                           Text(
-                            'จำนวนผู้เข้าใช้บริการ',
+                            title02,
                             style:
                                 TextStyle(color: Colors.green, fontSize: 16.0),
                           ),
                           Text(
-                            '16K',
+                            data02,
                             style: TextStyle(
                               fontSize: 30.0,
                             ),
@@ -519,8 +534,6 @@ class _DashboardState extends State<RequestDashboard> {
               );
             },
           ),
-          
-
           _buildTile(
             Padding(
               padding: const EdgeInsets.all(15.0),
@@ -576,15 +589,15 @@ class _DashboardState extends State<RequestDashboard> {
           ),
           Padding(
             padding: const EdgeInsets.all(7.5),
-            child: myCircularItems("จำนวนคำร้อง", "68.7M"),
+            child: myCircularItems(title03, data03),
           ),
           Padding(
             padding: const EdgeInsets.all(7.5),
-            child: myTextItems("Queue online", "48.6M"),
+            child: myTextItems(title04, data04),
           ),
           Padding(
             padding: const EdgeInsets.all(7.5),
-            child: myTextItems("ผู้ใช้", "25.5M"),
+            child: myTextItems(title05, data05),
           ),
           _buildTile(
             Padding(
@@ -615,7 +628,7 @@ class _DashboardState extends State<RequestDashboard> {
               // ),
               // Padding(
               //   padding: EdgeInsets.all(50.0),
-              child: new DatumLegendWithMeasures.withRandomData(),
+              child: new DatumLegendWithMeasuresRequest.withRandomData(),
               // ),
               //   ],
               // ),
