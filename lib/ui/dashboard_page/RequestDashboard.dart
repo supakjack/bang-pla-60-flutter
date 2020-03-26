@@ -14,7 +14,7 @@ final title01 = 'งบประมาณคงคลัง (พ่อง ทำ
 final data01 = '1K (พ่อง)';
 
 final title02 = 'ห้ามตั้งยางเกิน (พ่อง)';
-final data02 = '2K (พ่อง)';
+final data02 = '2K(พ่อง)';
 
 final title03 = 'จำนวนคำร้อง';
 final data03 = '68.7M';
