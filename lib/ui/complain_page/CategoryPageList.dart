@@ -50,7 +50,7 @@ class CategoryPageList extends StatelessWidget {
                             Expanded(
                               child: Container(
                                 decoration: new BoxDecoration(
-                                  color: HexColor('#F8FAFB'),
+                                  color: HexColor('#97b9fc'),
                                   borderRadius:
                                       BorderRadius.all(Radius.circular(16.0)),
                                   boxShadow: <BoxShadow>[

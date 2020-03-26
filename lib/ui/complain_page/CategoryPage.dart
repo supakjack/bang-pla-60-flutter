@@ -23,9 +23,9 @@ class _CategoryPageState extends State<CategoryPage> with TickerProviderStateMix
   @override
   void initState() {
     animationController = AnimationController(
-        duration: Duration(milliseconds: 1000), vsync: this);
+        duration: Duration(milliseconds: 2000), vsync: this);
     super.initState();
-    listnewsimage.add('assets/images/webInterFace.png');
+   // listnewsimage.add('assets/images/webInterFace.png');
     listnewsimage.add('assets/images/complain/maincomplain.png');
     listnewsimage.add('assets/images/complain/mainstatus.jpg');
     listnewsimage.add('assets/images/complain/news1.jpg');
@@ -272,7 +272,7 @@ class _CategoryPageState extends State<CategoryPage> with TickerProviderStateMix
                       padding:
                           const EdgeInsets.only(top: 0, left: 18, right: 16),
                       child: Text(
-                        "ร้องเรียน / ร้องทุกข์",
+                        "ยื่นคำร้องเรียน / ร้องทุกข์",
                         textAlign: TextAlign.left,
                         style: TextStyle(
                           fontWeight: FontWeight.w600,

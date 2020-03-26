@@ -479,7 +479,7 @@ class _ComplainFormInputState extends State<ComplainFormInput> {
                                                                   cursorColor: BangplaAppTheme.buildLightTheme().primaryColor,
                                                                   decoration:new InputDecoration(
                                                                   border:InputBorder.none,
-                                                                  hintText:"กรุณากรอกรายละเอียดร้อง",
+                                                                  hintText:"กรุณากรอกรายละเอียดคำร้อง",
                                                                 ),
                                                                 validator: (cdoc_detail) {
                                                                   if (cdoc_detail.isEmpty) {
