@@ -198,7 +198,7 @@ class _DashboardState extends State<QueueDashboard> {
                             style: TextStyle(
                                 color: Colors.blueAccent, fontSize: 16.0)),
                         Text(
-                          '46 คน',
+                          '46K',
                           style: TextStyle(
                             fontSize: 30.0,
                           ),
@@ -239,7 +239,7 @@ class _DashboardState extends State<QueueDashboard> {
                           style: TextStyle(color: Colors.red, fontSize: 16.0),
                         ),
                         Text(
-                          '84 คน',
+                          '84K',
                           style: TextStyle(color: Colors.black, fontSize: 30.0),
                         )
                       ],
@@ -259,15 +259,15 @@ class _DashboardState extends State<QueueDashboard> {
           ),
           Padding(
             padding: const EdgeInsets.all(7.5),
-            child: myTextItems("จำนวนคิว", "68"),
+            child: myTextItems("จำนวนคิว", "68K"),
           ),
           Padding(
             padding: const EdgeInsets.all(7.5),
-            child: myTextItems("คิวออนไลน์", "48"),
+            child: myTextItems("คิวออนไลน์", "48K"),
           ),
           Padding(
             padding: const EdgeInsets.all(7.5),
-            child: myTextItems("คิววอล์คอิน", "20"),
+            child: myTextItems("คิววอล์คอิน", "20K"),
           ),
           _buildTile(
             Padding(
